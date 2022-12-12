@@ -20,28 +20,23 @@ class ViewController: UIViewController {
     @IBOutlet var greenColorSlider: UISlider!
     @IBOutlet var blueColorSlider: UISlider!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         colorizedView.layer.cornerRadius = 22
         
+//        colorizedView.backgroundColor = UIColor(red: <#T##CGFloat#>, green: CGFloat, blue: <#T##CGFloat#>, alpha: <#T##CGFloat#>)
+        
         setupRedSlider()
         setupGreenSlider()
         setupBlueSlider()
-    
+        
         redColorValue.text = String(format: "%.2f",redColorSlider.value)
         greenColorValue.text = String(format: "%.2f",greenColorSlider.value)
         blueColorValue.text = String(format: "%.2f",blueColorSlider.value)
         
-        colorizedView.backgroundColor = UIColor(
-            red: CGFloat(redColorSlider.value),
-            green: CGFloat(greenColorSlider.value),
-            blue: CGFloat(blueColorSlider.value),
-            alpha: 1)
     }
  
-    
     private func setupRedSlider () {
         redColorSlider.value = 0
         redColorSlider.minimumTrackTintColor = .red

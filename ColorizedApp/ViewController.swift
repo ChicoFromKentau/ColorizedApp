@@ -48,7 +48,6 @@ class ViewController: UIViewController {
         let color = UIColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: 1.0)
         colorizedView.backgroundColor = color
     }
-    
     private func setupRedSlider () {
         redColorSlider.value = 0.25
         redColorSlider.minimumTrackTintColor = .red
